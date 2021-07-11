@@ -10,15 +10,19 @@ Be aware that this script will automatically accept the license and GDPR stateme
 
 ### Run using crontab
 
-1. Install the InfluxDB client for library from Python.
+1. [Install the Speedtest CLI application by Ookla.](https://www.speedtest.net/apps/cli)
+
+    NOTE: The `speedtest-cli` package in distro repositories is an unofficial client. It will need to be uninstalled before installing the Ookla Speedtest CLI application with the directions on their website.
+
+2. Install the InfluxDB client for library from Python.
 
     `pip3 install influxdb`
 
-2. Run the script.
+3. Run the script.
 
     `python3 ./speedtest.py`
 
-3. Edit crontab to make the script run every hour
+4. Modify crontab to run the script every hour
 
     Edit crontab using your favorite editor with `crontab -e` and add the following line: `0 */1 * * * /usr/bin/python3 /path/to/script/speedtest.py`, this way the cronjob runs every hour.
 	
