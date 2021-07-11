@@ -28,6 +28,6 @@ Be aware that this script will automatically accept the license and GDPR stateme
 	
 ## Grafana dashboard
 
-Included in the repository, is JSON formatted code for a Grafana dashboard. Includes measurements from the last speedtest, data over the last 6 hours, recent locations and an image of the last speedtest that ran. This dashboard requires the [dalvani-image-panel](https://grafana.com/grafana/plugins/dalvany-image-panel/) plugin, this can be installed when running: `grafana-cli plugins install dalvany-image-panel && systemctl restart grafana-server`.
+Included in the repository, is JSON formatted code for a Grafana dashboard. Includes measurements from the last speedtest, data over the last 6 hours, recent locations and an image of the last speedtest that ran. This dashboard requires the [dalvany-image-panel](https://grafana.com/grafana/plugins/dalvany-image-panel/) plugin, this can be installed when running: `grafana-cli plugins install dalvany-image-panel && systemctl restart grafana-server`.
 
 ![Grafana dashboard](https://i.imgur.com/xZuH2TT.png)
