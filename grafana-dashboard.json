@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 17,
-  "iteration": 1625994224389,
+  "iteration": 1626003942900,
   "links": [],
   "panels": [
     {
@@ -653,7 +653,7 @@
         "showHeader": true,
         "sortBy": [
           {
-            "desc": false,
+            "desc": true,
             "displayName": "Time"
           }
         ]
@@ -662,10 +662,11 @@
       "targets": [
         {
           "groupBy": [],
+          "limit": "5",
           "measurement": "server",
-          "orderByTime": "ASC",
+          "orderByTime": "DESC",
           "policy": "default",
-          "query": "SELECT last(\"host\") FROM \"server\" WHERE $timeFilter GROUP BY time($__interval) fill(none)",
+          "query": "SELECT \"host\" AS \"Hostname\", \"location\" AS \"Location\", \"name\" AS \"Provider\" FROM \"server\" WHERE $timeFilter ORDER BY \"time\" DESC",
           "queryType": "randomWalk",
           "rawQuery": false,
           "refId": "A",
@@ -718,6 +719,7 @@
         }
       ],
       "title": "Last locations",
+      "transformations": [],
       "type": "table"
     },
     {
@@ -866,5 +868,5 @@
   "timezone": "",
   "title": "Speedtests",
   "uid": "qARRyNaWk",
-  "version": 9
+  "version": 13
 }
